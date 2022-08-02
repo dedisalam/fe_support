@@ -2,11 +2,8 @@ version: '3.7'
 
 services:
   fe_support:
-    build:
-      context: ./
-      dockerfile: Dockerfile
-    container_name: fe_support
-    image: dedisalam/fe_support
+    container_name: fe-support
+    image: dedisalam/fe-support
     ports:
       - '80:80'
       - '443:443'
