@@ -1,8 +1,7 @@
-import { readFileSync } from 'fs';
-import { resolve } from 'path';
-import type { Configuration } from 'webpack-dev-server';
+const { readFileSync } = require('fs');
+const { resolve } = require('path');
 
-const DevServer = (): Configuration => ({
+const DevServer = () => ({
   hot: true, // enable HMR on the server
   port: 9090,
   https: {
@@ -14,4 +13,4 @@ const DevServer = (): Configuration => ({
   historyApiFallback: true, // fixes error 404-ish errors when using react router :see this SO question: https://stackoverflow.com/questions/43209666/react-router-v4-cannot-get-url
 });
 
-export default DevServer;
+module.exports = DevServer;

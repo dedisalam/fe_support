@@ -5,7 +5,7 @@
   "author": "Dedi Salam Permana",
   "license": "MIT",
   "scripts": {
-    "build": "npm run clean-dist && webpack --env test= --config=node_modules/@configs/webpack/webpack.prod.js",
+    "build": "npm run clean-dist && webpack --env production --config=configs/webpack/webpack.config.js",
     "clean-dist": "rimraf dist/*",
     "lint": "eslint './src/**/*.{js,ts,tsx}' --quiet",
     "start": "webpack serve --config=configs/webpack/webpack.dev.ts",
@@ -16,7 +16,6 @@
     "@babel/preset-env": "^7.18.2",
     "@babel/preset-react": "^7.17.12",
     "@babel/preset-typescript": "^7.17.12",
-    "@configs/webpack": "file:../webpack",
     "@popperjs/core": "^2.11.5",
     "@swc/core": "^1.2.210",
     "@testing-library/react": "^13.3.0",

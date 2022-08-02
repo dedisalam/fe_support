@@ -1,7 +1,6 @@
-import MiniCssExtractPlugin from 'mini-css-extract-plugin';
-import type { Configuration } from 'webpack';
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-const Module: Configuration['module'] = {
+const Module = {
   rules: [
     {
       test: [/\.jsx?$/, /\.tsx?$/],
@@ -25,4 +24,4 @@ const Module: Configuration['module'] = {
   ],
 };
 
-export default Module;
+module.exports = Module;

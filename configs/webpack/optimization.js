@@ -1,8 +1,7 @@
-import CssMinimizerPlugin from 'css-minimizer-webpack-plugin';
-import TerserPlugin from 'terser-webpack-plugin';
-import type { Configuration } from 'webpack';
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 
-const Optimization = (mode: Configuration['mode']): Configuration['optimization'] => {
+const Optimization = (mode) => {
   if (mode === 'production') {
     return {
       splitChunks: {
@@ -38,4 +37,4 @@ const Optimization = (mode: Configuration['mode']): Configuration['optimization'
   return {};
 };
 
-export default Optimization;
+module.exports = Optimization;
