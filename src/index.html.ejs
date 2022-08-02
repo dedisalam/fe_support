@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Frontend untuk server internal" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <% if (webpackConfig.mode == 'production') { %>
+    <link
+      href="/modules/bootstrap/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <% } else { %>
+    <link href="/modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <% } %>
+    <link
+      href="/modules/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <title>Support</title>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <!-- Dependency -->
+    <% if (webpackConfig.mode == 'production') { %>
+    <script src="/modules/react/umd/react.production.min.js"></script>
+    <script src="/modules/react-dom/umd/react-dom.production.min.js"></script>
+    <script src="/modules/react-router/umd/react-router.production.min.js"></script>
+    <script src="/modules/react-router-dom/umd/react-router-dom.production.min.js"></script>
+    <script src="/modules/axios/dist/axios.min.js"></script>
+    <script src="/modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <% } else { %>
+    <script src="/modules/react/umd/react.development.js"></script>
+    <script src="/modules/react-dom/umd/react-dom.development.js"></script>
+    <script src="/modules/react-router/umd/react-router.development.js"></script>
+    <script src="/modules/react-router-dom/umd/react-router-dom.development.js"></script>
+    <script src="/modules/axios/dist/axios.js"></script>
+    <script src="/modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <% } %>
+  </body>
+</html>
