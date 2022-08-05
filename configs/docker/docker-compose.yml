@@ -12,5 +12,5 @@ services:
       - production
 
 networks:
-  backend:
+  production:
     name: production
