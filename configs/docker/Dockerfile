@@ -1,9 +1,9 @@
 # Common build stage
 FROM nginx
 
-COPY ./configs/nginx ./etc/nginx
+COPY ../nginx ./etc/nginx
 
-COPY ./dist ./usr/share/nginx/html
+COPY ../../dist ./usr/share/nginx/html
 
 WORKDIR /usr/share/nginx/html
 
