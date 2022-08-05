@@ -3,7 +3,10 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        echo 'build'
+        nodejs(nodeJSInstallationName: 'node-14', configId: 'node-14') {
+          echo 'add node'
+        }
+
       }
     }
 
