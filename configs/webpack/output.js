@@ -1,16 +1,16 @@
-const path = require('path');
+const path = require("path");
 
 const Output = (mode) => {
-  if (mode === 'production') {
+  if (mode === "production") {
     return {
-      filename: 'js/bundle.[contenthash].min.js',
-      path: path.resolve(__dirname, '../../dist'),
-      publicPath: '/',
+      filename: "js/bundle.[contenthash].min.js",
+      path: path.resolve(__dirname, "../../dist"),
+      publicPath: "/",
     };
   }
 
   return {
-    publicPath: '/',
+    publicPath: "/",
   };
 };
 

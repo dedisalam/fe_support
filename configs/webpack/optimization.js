@@ -1,18 +1,18 @@
-const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
-const TerserPlugin = require('terser-webpack-plugin');
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+const TerserPlugin = require("terser-webpack-plugin");
 
 const Optimization = (mode) => {
-  if (mode === 'production') {
+  if (mode === "production") {
     return {
       splitChunks: {
-        chunks: 'all',
+        chunks: "all",
         minSize: 150000,
         maxSize: 200000,
         cacheGroups: {
           styles: {
-            name: 'styles',
-            type: 'css/mini-extract',
-            chunks: 'all',
+            name: "styles",
+            type: "css/mini-extract",
+            chunks: "all",
             enforce: true,
           },
         },

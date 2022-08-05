@@ -1,0 +1,43 @@
+{
+  "extends": ["plugin:prettier/recommended"],
+  "rules": {
+    "import/extensions": [
+      "error",
+      {
+        "tsx": "never"
+      }
+    ],
+    "import/order": [
+      "error",
+      {
+        "pathGroups": [
+          {
+            "pattern": "react*",
+            "group": "builtin",
+            "position": "before"
+          },
+          {
+            "pattern": "@*",
+            "group": "external",
+            "position": "after"
+          }
+        ],
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        },
+        "pathGroupsExcludedImportTypes": ["react"]
+      }
+    ],
+    "sort-imports": [
+      "error",
+      {
+        "ignoreCase": false,
+        "ignoreDeclarationSort": true,
+        "ignoreMemberSort": false,
+        "memberSyntaxSortOrder": ["none", "all", "multiple", "single"],
+        "allowSeparatedGroups": true
+      }
+    ]
+  }
+}
