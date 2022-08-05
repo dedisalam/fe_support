@@ -9,8 +9,8 @@ services:
       - '443:443'
     restart: 'unless-stopped'
     networks:
-      - backend
+      - production
 
 networks:
   backend:
-    name: backend
+    name: production

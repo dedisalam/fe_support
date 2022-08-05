@@ -47,6 +47,12 @@
       "esModuleInterop": true
     }
   },
-  "include": ["src", ".eslintrc.js", ".prettierrc.js", "configs"],
+  "include": [
+    "src",
+    ".eslintrc.js",
+    ".prettierrc.js",
+    "configs",
+    "webpack.config.js"
+  ],
   "exclude": ["node_modules"]
 }
