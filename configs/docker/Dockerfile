@@ -1,5 +1,4 @@
-# Common build stage
-FROM nginx
+FROM nginx-alpine
 
 COPY ./configs/nginx ./etc/nginx
 
