@@ -9,7 +9,7 @@
     "build-dev": "npm run clean-dist && webpack --env mode=development --config=configs/webpack/config.js",
     "clean-dist": "rimraf dist/*",
     "lint": "eslint './src/**/*.{js,ts,tsx}' --quiet",
-    "start": "webpack serve --config=configs/webpack/webpack.dev.ts",
+    "start": "webpack serve --config=configs/webpack/config.js",
     "test": "jest --coverage --watchAll --config=configs/jest.json"
   },
   "devDependencies": {

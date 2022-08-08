@@ -5,7 +5,6 @@ services:
     container_name: fe_support_dev
     image: dedisalam/fe_support:dev
     ports:
-      - '3080:80'
       - '3443:443'
     restart: 'unless-stopped'
     networks:
