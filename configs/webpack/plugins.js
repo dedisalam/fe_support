@@ -27,6 +27,10 @@ const Plugins = (env) => {
         new HtmlWebpackPlugin({
           template: path.resolve(__dirname, "../../src/index.html"),
         }),
+        new MiniCssExtractPlugin({
+          filename: "css/[name].css",
+          chunkFilename: "css/[name].css",
+        }),
         new webpack.DefinePlugin({
           "process.env": JSON.stringify(DEV_ENV),
         }),
