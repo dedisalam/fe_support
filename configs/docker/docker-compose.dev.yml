@@ -1,0 +1,16 @@
+version: '3.7'
+
+services:
+  fe_support_dev:
+    container_name: fe_support_dev
+    image: dedisalam/fe_support:dev
+    ports:
+      - '3080:80'
+      - '3443:443'
+    restart: 'unless-stopped'
+    networks:
+      - development
+
+networks:
+  development:
+    name: development
