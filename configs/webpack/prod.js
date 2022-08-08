@@ -4,14 +4,16 @@ const Output = require("./output");
 const Plugins = require("./plugins");
 const Resolve = require("./resolve");
 
-const Config = {
-  mode: "production",
-  resolve: Resolve(),
-  module: Module,
-  output: Output("production"),
-  devtool: "source-map",
-  optimization: Optimization("production"),
-  plugins: Plugins("production"),
+const Config = (env) => {
+  return {
+    mode: env.mode,
+    resolve: Resolve(),
+    module: Module,
+    output: Output(env),
+    devtool: "source-map",
+    optimization: Optimization(env),
+    plugins: Plugins(env),
+  };
 };
 
 module.exports = Config;
